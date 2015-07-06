@@ -1,0 +1,31 @@
+<!DOCTYPE FilterScript>
+
+<!--
+PLYMesher Meshlabserver script
+This script will generate point cloud normals and then create a polygon mesh from the point cloud.
+-->
+
+<FilterScript>
+<filter name="Compute normals for point sets">
+<Param type="RichInt" value="10" name="K"/>
+<Param type="RichBool" value="false" name="flipFlag"/>
+<Param x="0" y="0" z="0" type="RichPoint3f" name="viewPos"/>
+</filter>
+<filter name="Surface Reconstruction: Poisson">
+<Param type="RichInt" value="9" name="OctDepth"/>
+<Param type="RichInt" value="8" name="SolverDivide"/>
+<Param type="RichFloat" value="1" name="SamplesPerNode"/>
+<Param type="RichFloat" value="1" name="Offset"/>
+</filter>
+<filter name="Vertex Attribute Transfer">
+<Param type="RichMesh" value="0" name="SourceMesh"/>
+<Param type="RichMesh" value="1" name="TargetMesh"/>
+<Param type="RichBool" value="false" name="GeomTransfer"/>
+<Param type="RichBool" value="false" name="NormalTransfer"/>
+<Param type="RichBool" value="true" name="ColorTransfer"/>
+<Param type="RichBool" value="false" name="QualityTransfer"/>
+<Param type="RichBool" value="false" name="SelectionTransfer"/>
+<Param type="RichBool" value="false" name="QualityDistance"/>
+<Param type="RichAbsPerc" value="0.19723" min="0" name="UpperBound" max="9.86148"/>
+</filter>
+</FilterScript>
