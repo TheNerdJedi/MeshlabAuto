@@ -5,7 +5,6 @@ Automation of Meshlab
 MLX file is a Meshlab Filter Script. MeshLab is an open source, portable, and extensible system for the processing and editing 
 of unstructured 3D triangular meshes.
 
-
 I've just created a batch file with necessary loops and calls the .mlx file that will run the meshlabserver 
 command. However one should know that the resulting files will be saved in the same directory where 
 meshlabserver.exe is.
@@ -43,6 +42,7 @@ Change the working directory to the meshlab frameworks folder to fix the Mac bas
 
 ### Step 2:
 On MAC OSX run meshlabserver from the current working directory
+
 cd /Applications/meshlab.app/Contents/Frameworks/Applications/meshlab.app/Contents/MacOS/meshlabserver  -i ~/example.obj -o ~/example.obj -s ~/examplefilter.mlx -om vn   
 
 Replace example.obj with object file and examplefilter.mlx with the Necessary Filter
