@@ -19,7 +19,7 @@ I've just created a batch file with necessary loops and calls the .mlx file that
 command. However one should know that the resulting files will be saved in the same directory where 
 meshlabserver.exe is. You can find this file in the "Scripts" folder
 
-## Windows(If you're not MeshLab Server friendly)      Pics Uploaded Soon
+## Windows (If you're not MeshLab Server friendly)      Pics Uploaded Soon
 
 ### Step 1:
 Put the obj files you want to process into a folder with nothing else inside
@@ -44,6 +44,30 @@ Put the obj files you want to process into a folder with nothing else inside
 Each .OBJ should have been processed with the filters you choose in step 2 and the output obj files are prefixed with "OUT_" and saved in the same folder
 
 PS: this is a 64 bit version, if you're using a 32 bit windows, just replace %ProgramFiles(x86)% (line 19) with %ProgramFiles%
+
+## Windows (Using cmd prompt)
+
+### Step 1:
+Open up cmd prompt
+
+### Step 2:
+Type "C:\Program Files\VCG\MeshLab\meshlabserver.exe" to open up meshlabserver 
+You will notice certain flags
+-i is where you put in your input
+-o is where you put your output
+
+
+"C:\Program Files\VCG\MeshLab\meshlabserver.exe"-i C:\Users\File Location\example.obj -o C:/Users/File Destination/example.obj -s examplefilter.mlx -om 
+(using the flags indicated from "C:\Program Files\VCG\MeshLab\meshlabserver.exe" select what you want)
+
+This basically indicates where to get the file that you want the scripts to be applied to and the output indicates where you want the initial file to end up
+
+#### Problems
+
+I had some initial problems with this because I had taken the OBJ and imported it into Blender for more edits, but 
+I noticed that the file size was drastically reduced(almost half) 
+
+
 
 ## Mac
 
