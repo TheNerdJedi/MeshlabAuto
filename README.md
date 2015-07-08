@@ -76,6 +76,7 @@ So in the end the line that you write is such:
 Basically what that line does is open the file and then export it back out to the desination indicated with the necessary files associated with it. Of course this is great if you just 
 want to import a file and then export it back out, which is exactly what I wanted ;) 
 
+Depending on the size of the file, this process can take from less than 10 secs to 20 minutes. So far it hasn't crashed yet, even after a 1GB file. Proceed large files with caution!
 
 ## Mac
 
