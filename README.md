@@ -65,8 +65,16 @@ This basically indicates where to get the file that you want the scripts to be a
 #### Problems
 
 I had some initial problems with this because I had taken the OBJ and imported it into Blender for more edits, but 
-I noticed that the file size was drastically reduced(almost half) 
+I noticed that the file size was drastically reduced(almost half!), majority of the materials were gone, and there was no additional MTL file.
 
+There is a simple fix to this solution and that is by adding all the flags at the end of the -om
+
+So in the end the line that you write is such:
+
+"C:\Program Files\VCG\MeshLab\meshlabserver.exe"-i C:\Users\File Location\example.obj -o C:/Users/File Destination/example.obj -om vc vf vq vn vt fc ff fq fn wc wn wt
+
+Basically what that line does is open the file and then export it back out to the desination indicated with the necessary files associated with it. Of course this is great if you just 
+want to import a file and then export it back out, which is exactly what I wanted ;) 
 
 
 ## Mac
