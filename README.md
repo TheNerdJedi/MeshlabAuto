@@ -78,6 +78,31 @@ want to import a file and then export it back out, which is exactly what I wante
 
 Depending on the size of the file, this process can take from less than 10 secs to 20 minutes. So far it hasn't crashed yet, even after a 1GB file. Proceed large files with caution!
 
+
+##### VERY IMPORTANT UPDATE
+
+Maybe we don't want to repeatedly type "C:\Program Files\VCG\MeshLab\meshlabserver.exe" because we are all lazy. (Only if you need MeshLab regularly)
+Also this simplifies the need for us to be in the certain directory of the file that we are processing.
+
+Now here is a simple way to activate "meshlabserver.exe" 
+
+We will be accessing the "path" folder because this will allow us to access .exe files from our cmd prompt
+
+See this site for more details
+http://superuser.com/questions/77624/run-exe-from-command-prompt
+
+Go to "System" -> "Advanced System Settings" ->  "Envirnment Variables" -> In "System Variables" scroll down to PATH variable, and click edit ->
+In "Variable Value" place ";C:\Program Files\VCG\MeshLab"
+
+Now in the cmd prompt we can just type "meshlabserver.exe" or "meshlabserver" and BAM it starts 
+
+Make sure you are in the correct directory as well, accessing that can be done by using "chdir"
+
+
+###### Troubleshooting
+
+Type "echo %path%" to make sure MeshLab was added, if not just refresh the console.
+
 ## Mac
 
 ### Step 1:
@@ -89,6 +114,10 @@ On MAC OSX run meshlabserver from the current working directory
 cd /Applications/meshlab.app/Contents/Frameworks/Applications/meshlab.app/Contents/MacOS/meshlabserver  -i ~/example.obj -o ~/example.obj -s ~/examplefilter.mlx -om vn   
 
 Replace example.obj with object file and examplefilter.mlx with the Necessary Filter
+
+
+
+###### I will be later updating this because it is becoming very unorganized.
 
 
 
