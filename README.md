@@ -51,7 +51,11 @@ PS: this is a 64 bit version, if you're using a 32 bit windows, just replace %Pr
 Open up cmd prompt
 
 ### Step 2:
-Type "C:\Program Files\VCG\MeshLab\meshlabserver.exe" to open up meshlabserver 
+Type 
+...
+"C:\Program Files\VCG\MeshLab\meshlabserver.exe" 
+...
+to open up meshlabserver 
 You will notice certain flags
 -i is where you put in your input
 -o is where you put your output
