@@ -1,7 +1,6 @@
 # MeshlabAuto
 Automation of Meshlab
 
-
 MeshLab is an open source, portable, and extensible system for the processing and editing 
 of unstructured 3D triangular meshes.
 
@@ -51,13 +50,13 @@ PS: this is a 64 bit version, if you're using a 32 bit windows, just replace %Pr
 Open up cmd prompt
 
 ### Step 2:
-Type `"C:\Program Files\VCG\MeshLab\meshlabserver.exe"` to open up meshlabserver 
+Type ```"C:\Program Files\VCG\MeshLab\meshlabserver.exe"``` to open up meshlabserver 
 You will notice certain flags
 -i is where you put in your input
 -o is where you put your output
 
 
-`"C:\Program Files\VCG\MeshLab\meshlabserver.exe"-i C:\Users\File Location\example.obj -o C:/Users/File Destination/example.obj -s examplefilter.mlx -om` 
+```"C:\Program Files\VCG\MeshLab\meshlabserver.exe"-i C:\Users\File Location\example.obj -o C:/Users/File Destination/example.obj -s examplefilter.mlx -om``` 
 (using the flags indicated from "C:\Program Files\VCG\MeshLab\meshlabserver.exe" select what you want)
 
 This basically indicates where to get the file that you want the scripts to be applied to and the output indicates where you want the initial file to end up
@@ -71,7 +70,7 @@ There is a simple fix to this solution and that is by adding all the flags at th
 
 So in the end the line that you write is such:
 
-`"C:\Program Files\VCG\MeshLab\meshlabserver.exe"-i C:\Users\File Location\example.obj -o C:/Users/File Destination/example.obj -om vc vf vq vn vt fc ff fq fn wc wn wt`
+```"C:\Program Files\VCG\MeshLab\meshlabserver.exe"-i C:\Users\File Location\example.obj -o C:/Users/File Destination/example.obj -om vc vf vq vn vt fc ff fq fn wc wn wt```
 
 Basically what that line does is open the file and then export it back out to the desination indicated with the necessary files associated with it. Of course this is great if you just 
 want to import a file and then export it back out, which is exactly what I wanted ;) 
@@ -81,7 +80,7 @@ Depending on the size of the file, this process can take from less than 10 secs 
 
 ##### VERY IMPORTANT UPDATE
 
-Maybe we don't want to repeatedly type `"C:\Program Files\VCG\MeshLab\meshlabserver.exe"` because we are all lazy. (Only if you need MeshLab regularly)
+Maybe we don't want to repeatedly type ```"C:\Program Files\VCG\MeshLab\meshlabserver.exe"``` because we are all lazy. (Only if you need MeshLab regularly)
 Also this simplifies the need for us to be in the certain directory of the file that we are processing.
 
 Now here is a simple way to activate "meshlabserver.exe" 
@@ -91,8 +90,8 @@ We will be accessing the "path" folder because this will allow us to access .exe
 See this site for more details
 http://superuser.com/questions/77624/run-exe-from-command-prompt
 
-Go to `"System" -> "Advanced System Settings" ->  "Envirnment Variables" -> In "System Variables" scroll down to PATH variable, and click edit ->
-In "Variable Value" place ";C:\Program Files\VCG\MeshLab"`
+Go to ```"System" -> "Advanced System Settings" ->  "Envirnment Variables" -> In "System Variables" scroll down to PATH variable, and click edit ->
+In "Variable Value" place ";C:\Program Files\VCG\MeshLab"```
 
 Now in the cmd prompt we can just type `"meshlabserver.exe"` or `"meshlabserver"` and BAM it starts 
 
@@ -111,7 +110,7 @@ Change the working directory to the meshlab frameworks folder to fix the Mac bas
 ### Step 2:
 On MAC OSX run meshlabserver from the current working directory
 
-`cd /Applications/meshlab.app/Contents/Frameworks/Applications/meshlab.app/Contents/MacOS/meshlabserver  -i ~/example.obj -o ~/example.obj -s ~/examplefilter.mlx -om vn`   
+```cd /Applications/meshlab.app/Contents/Frameworks/Applications/meshlab.app/Contents/MacOS/meshlabserver  -i ~/example.obj -o ~/example.obj -s ~/examplefilter.mlx -om vn```   
 
 Replace example.obj with object file and examplefilter.mlx with the Necessary Filter
 
